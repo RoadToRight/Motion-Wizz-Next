@@ -34,7 +34,7 @@ const LogoSlider = () => {
                         return (
                             <SwiperSlide key={logo + index}>
                                 <div className="logo_card">
-                                    <img src={logo} alt={`Logo ${index + 1}`} />
+                                    <img src={logo} alt={`Logo ${index + 1}`} width={140} height={50} />
                                 </div>
                             </SwiperSlide>
                         )
@@ -62,7 +62,6 @@ const LogoSliderSec = styled.section`
         width: 100%;
         height: 100%;
         object-fit: contain;
-        max-width: 140px;
     }
 
     .swiper-wrapper{

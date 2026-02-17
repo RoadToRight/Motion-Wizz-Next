@@ -96,7 +96,7 @@ const Testimonial = () => {
 
 
                                     <div className="person_info">
-                                        <div className="person_image"><img src={pic} alt="" /></div>
+                                        <div className="person_image"><img src={pic} alt="" width={52} height={52} /></div>
                                         <div className="info">
                                             <div className="name">{name}</div>
                                             <div className="designation">{designation}</div>
@@ -234,9 +234,7 @@ const TestimonialSec = styled.div`
     .person_image{
   
         img{
-          
-                  width: 52px;
-        height: 52px;
+
             border-radius: 100px;
             object-fit: contain;
         }
