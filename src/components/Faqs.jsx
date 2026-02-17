@@ -61,7 +61,7 @@ const Faqs = () => {
 
         <div className="image_faqs_wrapper">
           <div className="image_section">
-            <img src="https://res.cloudinary.com/dp6b6emb9/image/upload/v1771122725/faqs_fonxjz.webp" alt="" />
+            <img loading='lazy' src="https://res.cloudinary.com/dp6b6emb9/image/upload/v1771122725/faqs_fonxjz.webp" alt="" />
           </div>
 
           <FaqsWrapper FaqsData={FaqsData} />

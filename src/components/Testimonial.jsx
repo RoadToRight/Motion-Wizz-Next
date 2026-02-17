@@ -96,7 +96,7 @@ const Testimonial = () => {
 
 
                                     <div className="person_info">
-                                        <div className="person_image"><img src={pic} alt="" width={52} height={52} /></div>
+                                        <div className="person_image"><img loading='lazy' src={pic} alt="" width={52} height={52} /></div>
                                         <div className="info">
                                             <div className="name">{name}</div>
                                             <div className="designation">{designation}</div>

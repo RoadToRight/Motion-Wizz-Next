@@ -21,7 +21,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer_top">
           <div className="sec logo_section">
-            <img src="https://res.cloudinary.com/dp6b6emb9/image/upload/v1770498867/Logo-2-1.png_1_uaok4j.webp" alt="Motion Wizz Logo" />
+            <img loading='lazy' src="https://res.cloudinary.com/dp6b6emb9/image/upload/v1770498867/Logo-2-1.png_1_uaok4j.webp" alt="Motion Wizz Logo" />
           </div>
           <div className="list_footer_menus">
             {menus?.map((item, idx) => (
