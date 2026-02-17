@@ -5,7 +5,8 @@
 /* DM Sans Regular */
 @font-face {
   font-family: "DM Sans";
-  src: url("/https://res.cloudinary.com/dp6b6emb9/raw/upload/v1771193586/DMSans-Regular_dhmszs.woff2") format("woff2");
+  /* src: url("/https://res.cloudinary.com/dp6b6emb9/raw/upload/v1771193586/DMSans-Regular_dhmszs.woff2") format("woff2"); */
+  src: url("/DMSans-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -13,7 +14,8 @@
 /* DM Sans Medium */
 @font-face {
   font-family: "DM Sans";
-  src: url("https://res.cloudinary.com/dp6b6emb9/raw/upload/v1771193586/DMSans-Medium_dfx7od.woff2") format("woff2");
+  /* src: url("https://res.cloudinary.com/dp6b6emb9/raw/upload/v1771193586/DMSans-Medium_dfx7od.woff2") format("woff2"); */
+  src: url("/DMSans-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -21,7 +23,8 @@
 /* DM Sans Bold */
 @font-face {
   font-family: "DM Sans";
-  src: url("https://res.cloudinary.com/dp6b6emb9/raw/upload/v1771193586/DMSans-Bold_cq9ymd.woff2") format("woff2");
+  /* src: url("https://res.cloudinary.com/dp6b6emb9/raw/upload/v1771193586/DMSans-Bold_cq9ymd.woff2") format("woff2"); */
+  src: url("/DMSans-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
