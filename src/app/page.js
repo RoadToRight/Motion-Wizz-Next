@@ -2,6 +2,8 @@
 import LogoSlider from '@/components/LogoSlider'
 import Navbar from '@/components/Navbar'
 import ThreeHero from '@/components/ThreeHero'
+import dynamic from 'next/dynamic'
+
 import { lazy, Suspense } from 'react'
 import 'swiper/css'
 import 'swiper/css/navigation'

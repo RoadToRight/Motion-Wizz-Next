@@ -1,9 +1,15 @@
-"use client"
 import React, { useEffect, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
-import Sphere from '../components/Sphere'
-
+import dynamic from 'next/dynamic'
+// import Sphere from '../components/Sphere'
+const Sphere = dynamic(() => import('../components/Sphere'), {
+    ssr: false
+})
 const CanvasHero = () => {
+
+    if (window.innerWidth <= 767) {
+        return <div className='hero_img'><img src="/orangeball.webp" width={"100%"} height={"100%"} /></div>;
+    }
 
     const [DPS, setDPS] = useState(1);
     useEffect(() => {
@@ -14,7 +20,7 @@ const CanvasHero = () => {
 
     return (
         <>
-            <Canvas dpr={DPS} style={{ width: '100%', height: '100%' }}>
+            <Canvas className='threeD_model' dpr={DPS} style={{ width: '100%', height: '100%' }}>
                 <Sphere />
             </Canvas>
         </>

@@ -11,7 +11,7 @@ const Hero = () => {
                     <h1>Explainer videos that turn complex ideas into clear decisions. </h1>
                     <h4 className="subheading">Explainer videos that turn “huh?” into “aha!”</h4>
                     <p>Trusted by SaaS and tech teams to explain products, win buy-in and accelerate growth.</p>
-                    <Button text={"Book a free Story Planning "} icon={<IoIosArrowRoundForward size={22} />} />
+                    <Button className={"hero_btn"} text={"Book a free Story Planning "} icon={<IoIosArrowRoundForward size={25} color='#ff5705' />} />
                 </div>
 
                 <div className="right_side">
@@ -78,9 +78,21 @@ background:
     }
 
     @media (max-width:767px){
+            padding: 0px 0px;
         .left_side{
             width: 100%;
         }
+        .container{
+            padding: 30px 0px;
+        }
+           .right_side{
+        width: 100%;
+           
+            margin-top:15px;
+    }
+    .hero_btn{
+         margin-top:10px;
+    }
     }
 
 `

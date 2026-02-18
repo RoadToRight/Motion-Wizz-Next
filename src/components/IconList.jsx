@@ -29,4 +29,10 @@ const IconListDiv = styled.div`
         color: black;
         text-decoration: none;
     }
+    @media (max-width:767px){
+        margin-top: 0px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 20px;
+    }
 `

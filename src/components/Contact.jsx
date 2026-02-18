@@ -377,12 +377,16 @@ const ContactSec = styled.section`
 
   /* Responsive Design */
   @media (max-width: 767px) {
-    padding: 60px 0;
+    padding: 0px 0 60px 0px;
 
     .contact_container {
       flex-direction: column;
       gap: 40px;
     }
+        .icon_list_Wrapper{
+            flex-direction: column;
+            gap: 10px;
+        }
 
     .left_side_contact,
     .right_side_contact,.contact_top {

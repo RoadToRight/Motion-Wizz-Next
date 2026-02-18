@@ -170,12 +170,14 @@ padding: 80px 0px;
 .btn{
     display: flex;
     justify-content: center;
-    aicgn-items: center;
     margin-top: 20px;
 }
 .portfolio_top{
     margin-bottom: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     p{
         margin: 0 auto;
     }
@@ -221,6 +223,23 @@ padding: 80px 0px;
     .portfolio_track {
         
     }
+    .portfolio_track{
+
+    img{
+        width: 420px;
+
+    }
+}
+}
+
+@media (max-width:767px){
+    padding: 50px 0px;
+       .portfolio_track{
+        img{
+        width: 300px;
+
+    }
+}
 }
 
 `

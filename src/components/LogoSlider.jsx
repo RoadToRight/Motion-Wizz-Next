@@ -29,7 +29,27 @@ const LogoSlider = () => {
                 }} pagination={{ clickable: true, el: ".custom_pagination" }} autoplay={{
                     delay: 3000,
                     disableOnInteraction: false
-                }}>
+                }}
+                    breakpoints={{
+                        300: {
+                            slidesPerView: 2,
+                            centeredSlides: false
+                        },
+                        767: {
+                            slidesPerView: 2,
+                            centeredSlides: false,
+                            spaceBetween: 5,
+                        },
+                        1024: {
+                            slidesPerView: 4,
+                            spaceBetween: 10,
+                        },
+                        1200: {
+                            slidesPerView: 5,
+                        }
+                    }}
+
+                >
                     {logos?.map((logo, index) => {
                         return (
                             <SwiperSlide key={logo + index}>
@@ -88,5 +108,28 @@ const LogoSliderSec = styled.section`
   height: 2px;
   background: linear-gradient(to right, #FF7112, #000000);
 }
+
+@media (max-width:1024px){
+    .logo_card img{
+        /* max-width: 110px !important; */
+
+    }
+        .swiper-slide-active{
+       transform: scale(1);
+       z-index: 3;
+        box-shadow: 0px 3.5px 26px rgba(0,0,0,0);
+      
+    }
+        .swiper-slide::after {
+  content: "";
+  position: absolute; 
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #FF7112, #000000);
+}
+}
+
 
 `

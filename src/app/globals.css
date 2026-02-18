@@ -66,6 +66,8 @@ p {
   padding: 4px 14px;
   color: white;
   font-size: 12px;
+  width: max-content;
+  margin: 0 auto;
 }
 
 @property --angle {
@@ -178,5 +180,9 @@ button {
 
   h2 {
     font-size: 26px;
+  }
+
+  button {
+    font-size: 14px;
   }
 }

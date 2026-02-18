@@ -57,6 +57,7 @@ const Faqs = () => {
   return (
     <FaqsWrapperSec>
       <div className="container">
+        <h5 className='highlight'>FAQ'S</h5>
         <h2>Frequently Asked Questions</h2>
 
         <div className="image_faqs_wrapper">
@@ -118,6 +119,9 @@ const FaqsWrapperSec = styled.section`
     text-align: center;
     letter-spacing: -0.5px;
     animation: slideDown 0.8s ease-out;
+  }
+  .highlight{
+    margin-bottom: 10px;
   }
   @keyframes float {
     0%, 100% {
@@ -260,10 +264,10 @@ const FaqsWrapperSec = styled.section`
       margin-bottom: 40px;
     }
 
-    .accordian_wrapper {
+    .image_faqs_wrapper  .accordian_wrapper {
       gap: 12px;
       width: 100% !important;
-      margin: 0;
+      margin-top: 10px;
     }
 
     .ques {

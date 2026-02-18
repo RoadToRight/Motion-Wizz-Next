@@ -56,9 +56,11 @@ const Testimonial = () => {
     return (
         <TestimonialSec>
             <div className="container">
+                <div className="header">
+                    <h3 className='highlight'>Testimonials</h3>
+                    <h2>Discover What Other Brands Are Saying About us</h2>
+                </div>
 
-                <h3>Testimonials</h3>
-                <h2>Discover What Other Brands Are Saying About us</h2>
 
                 <Swiper className="reviews_card_wrapper" loop={true} spaceBetween={20} slidesPerView={3} modules={[Pagination, Navigation, Autoplay]} navigation={{
                     prevEl: ".prev-btn",
@@ -142,6 +144,14 @@ const TestimonialSec = styled.div`
             border-radius: 100px;
             margin: 0 auto;
             margin-top: 10px;
+    }
+    .header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
     }
     .navigation{
          display: flex;  
@@ -239,5 +249,7 @@ const TestimonialSec = styled.div`
             object-fit: contain;
         }
     }
-    
+    @media (max-width:767px) {
+        
+    }
 `

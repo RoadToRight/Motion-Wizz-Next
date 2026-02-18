@@ -1,12 +1,13 @@
+"use client"
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import Button from './Button'
-import CanvasHero from '@/clientComponents/CanvasHero'
-
+import dynamic from 'next/dynamic'
+// import CanvasHero from '@/clientComponents/CanvasHero'
+const CanvasHero = dynamic(() => import('../clientComponents/CanvasHero'), {
+    ssr: false
+})
 const ThreeHero = () => {
-
-
-
 
     return (
         <MainHeroContainer>
@@ -37,6 +38,7 @@ const MainHeroContainer = styled.div`
   flex-direction: column;
   height: calc(85vh - 90px);
   cursor: pointer;
+  padding:80px 20px 0px 20px;
   
 .text_container{
     display: flex;
@@ -47,7 +49,7 @@ const MainHeroContainer = styled.div`
       height: 50%;
           gap: 15px;
           position: relative;
-          top: 80px;
+          /* top: 80px; */
 }
 .input{
         display: flex;
@@ -74,12 +76,53 @@ max-width: 700px;
 p{
     max-width: 600px;
 }
+    @media (max-width:1024px) {
+  h1 {
+    font-size: 30px;
+  }
 
+}
+
+  @media (max-width:767px){
+     padding:50px 20px 0px 20px;
+      height: max-content;
+      gap: 20px;
+      h1 {
+    font-size: 30px;
+  }
+    .threeD_model{
+        display: none;
+    }
+    .hero_img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero_img img{
+            max-width: 330px;
+    margin: 0 auto;
+    }
+  }
 `
+const shadowPulse = keyframes`
+  0% {
+    filter: drop-shadow(5px 5px 10px rgba(255,87,5,0.8));
+  }
+  50% {
+    filter: drop-shadow(10px 10px 20px rgba(255,87,5,1));
+  }
+  100% {
+    filter: drop-shadow(5px 5px 10px rgba(255,87,5,0.8));
+  }
+`;
+
 const CanvasContianer = styled.div`
-
-
   width: 100%;
   height: 50%;
 
-`
+  img {
+    filter: drop-shadow(5px 5px 10px rgba(255,87,5,1));
+    animation: ${shadowPulse} 2s ease-in-out infinite;
+  }
+`;
+

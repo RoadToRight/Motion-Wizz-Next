@@ -57,11 +57,11 @@ const Footer = () => {
 export default Footer
 
 const FooterSec = styled.footer`
-  background: url("https://res.cloudinary.com/dp6b6emb9/image/upload/v1770500261/Footer_eyglgx.webp") no-repeat bottom/cover;
+  /* background: url("https://res.cloudinary.com/dp6b6emb9/image/upload/v1770500261/Footer_eyglgx.webp") no-repeat bottom/cover; */
   padding: 80px 0 30px;
   color: #ddd;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg , #ffffff,#ffffff,#ffffff,#ff5e00);
+  /* background: linear-gradient(135deg , #ffffff,#ffffff,#ffffff,#ff5e00); */
 
   .container {
     max-width: 1200px;
@@ -167,6 +167,9 @@ const FooterSec = styled.footer`
         grid-template-columns: repeat(1,1fr);
         padding-left: 20px;
         flex-direction: column;
+    }
+    .sec h5{
+      font-size: 16px;
     }
     .footer_bottom {
       flex-direction: column;

@@ -1,9 +1,8 @@
-"use client"
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
-import { OrbitControls, useTexture } from '@react-three/drei';
+import { OrbitControls } from '@react-three/drei';
 const Sphere = () => {
 
     const sphereRef = useRef();

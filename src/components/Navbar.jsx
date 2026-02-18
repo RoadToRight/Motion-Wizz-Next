@@ -25,7 +25,6 @@ const Navbar = () => {
                         <Logo />
                     </div>
                     <Navmenu Menu={Menu} />
-                    <Button text={"Get a Quote"} />
 
                 </div>
 
@@ -38,7 +37,7 @@ const Navbar = () => {
 export default Navbar
 
 const Nav = styled.nav`
-    /* position: sticky; */
+    position: sticky;
     position: relative;
     top: 10px;
     z-index: 99;
@@ -83,9 +82,10 @@ li{
     }
     @media (max-width:1024px){
         padding: 0px 0px;
-
+        margin: 0 20px;
         .nav_container{
             backdrop-filter:unset;
+            justify-content: space-between;
         }
         
           .menu_section {
@@ -116,7 +116,7 @@ li{
 }
 
 .Drawer > div{
-  padding: 20px ;
+  padding: 20px 30px;
   border-bottom:1px solid white;
 
 }
@@ -153,6 +153,9 @@ li{
         position: relative;
         z-index: 5;
         
+    }
+    .navbtn{
+        display: none;
     }
     }
   

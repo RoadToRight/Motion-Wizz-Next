@@ -74,4 +74,13 @@ const Ready = styled.div`
             color: #737373;
         }
     }
+    
+    @media (max-width:767px){
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+        margin: 0px 20px;
+        padding: 25px;
+    }
 `
