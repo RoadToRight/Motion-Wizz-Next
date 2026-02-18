@@ -207,7 +207,7 @@ const ContactSec = styled.section`
   .icon_list_Wrapper {
     display: flex;
     gap: 24px;
-    margin-bottom: 50px;
+    margin: 20px 0;
     /* max-width: 300px; */
   }
 

@@ -194,17 +194,27 @@ padding: 80px 0px;
 .portfolio_track{
     display: flex;
         gap: 20px;
-    animation: marquee 40s linear infinite;
     img{
         width: 550px;
            height: 100%;
         object-fit: cover;
     }
 }
+.top_track{
+    animation: marquee 40s linear infinite;
+
+}
+.bottom_track{
+  animation: reverseMarquee 40s linear infinite;
+}
 .portfolio_wrapper{
        display: flex;
         gap: 20px;
         overflow: hidden;
+}
+.portfolio_wrapper_bottom{
+    flex-direction: row-reverse;
+
 }
 
 @keyframes marquee {
@@ -216,6 +226,14 @@ padding: 80px 0px;
     }
 }
 
+@keyframes reverseMarquee {
+    from{
+        transform: translate(0%);
+    }
+    to{
+        transform: translate(calc(100% - 20px));
+    }
+}
 @media (max-width:1024px){
     .text_btn p{
         width: 100%;

@@ -27,7 +27,7 @@ const PortfolioVideo = ({ topMedia, bottomMedia }) => {
                 {
                     [1, 2, 3, 4].map((_, index) => {
                         return (
-                            <div className="portfolio_track" key={index}>
+                            <div className="portfolio_track top_track" key={index}>
                                 {topMedia?.map((img, index) => {
                                     return (
 
@@ -45,13 +45,13 @@ const PortfolioVideo = ({ topMedia, bottomMedia }) => {
             </div>
 
 
-            <div className="portfolio_wrapper">
+            <div className="portfolio_wrapper portfolio_wrapper_bottom">
 
                 {
-                   
+
                     [1, 2, 3, 4].map((_, index) => {
                         return (
-                            <div className="portfolio_track" key={index}>
+                            <div className="portfolio_track bottom_track" key={index}>
                                 {bottomMedia?.map((img, index) => {
                                     return (
 

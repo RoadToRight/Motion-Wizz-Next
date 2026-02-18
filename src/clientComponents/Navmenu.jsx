@@ -10,7 +10,7 @@ const Navmenu = ({ Menu }) => {
 
     return (
         <NavMenu>
-            <div className="menu_section" style={{ width: window.innerWidth < 1024 && (drawerOpen ? "100%" : "0%"), padding: drawerOpen ? "20px" : "0px" }}>
+            <div className="menu_section" style={{ width: (drawerOpen ? "100%" : "0%"), padding: drawerOpen ? "20px" : "0px" }}>
 
                 <div>
 
@@ -18,14 +18,14 @@ const Navmenu = ({ Menu }) => {
                     <ul className='nav_ul Drawer'>
 
                         <div className='cancel_icon_div' onClick={() => setDrawerOpen(false)}>
-                            <MdCancel color='#ef5527' size={30} className='cancel_icon' />
+                            <MdCancel color='#ef5527' size={30} className='cancel_icon' cursor={"pointer"} />
                         </div>
 
 
                         {Menu?.map(({ main, submenu }) => {
                             return (
                                 <div key={main}>
-                                    <Link href={"/"}><ul>{main}</ul></Link>
+                                    <Link href={"/"}><li>{main}</li></Link>
                                     {submenu && submenu.length > 0 ? submenu?.map((subitem) => {
                                         return (
                                             <Link href={"/"} key={subitem}><li style={{ padding: "0px" }}>{subitem}</li></Link>
@@ -43,14 +43,14 @@ const Navmenu = ({ Menu }) => {
                 </div>
 
             </div>
-            {window.innerWidth < 1024 && <Button text={"Get a Quote"} className={"navbtn"} padding='8px 13px' />}
+            {<Button text={"Get a Quote"} className={"navbtn"} padding='8px 13px' />}
 
 
 
 
 
             <div onClick={() => setDrawerOpen(true)}>
-                {window.innerWidth < 1024 && <MdMenu color='#ef5527' className='hamburger' size={35} />}
+                {<MdMenu color='#ef5527' className='hamburger' size={35} />}
             </div>
         </NavMenu>
     )
