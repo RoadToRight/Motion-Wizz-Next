@@ -12,16 +12,6 @@
   font-display: swap;
 }
 
-/* DM Sans Medium */
-@font-face {
-  font-family: "DM Sans";
-  /* src: url("https://res.cloudinary.com/dp6b6emb9/raw/upload/v1771193586/DMSans-Medium_dfx7od.woff2") format("woff2"); */
-  src: url("/DMSans-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* DM Sans Bold */
 @font-face {
   font-family: "DM Sans";

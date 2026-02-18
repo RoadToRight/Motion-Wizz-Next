@@ -88,7 +88,7 @@ const Testimonial = () => {
 
                     {reviewsData?.map(({ name, designation, review, pic }) => {
                         return (
-                            <SwiperSlide style={{ paddingTop: "30px" }} className='testimonial_slide'>
+                            <SwiperSlide style={{ paddingTop: "30px" }} className='testimonial_slide' key={name}>
                                 <div className="reviews_card">
                                     <div className="quote_icon">“</div>
                                     <div className="stars">★★★★★</div>
