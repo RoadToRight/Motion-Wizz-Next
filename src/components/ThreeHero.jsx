@@ -38,7 +38,7 @@ const MainHeroContainer = styled.div`
   flex-direction: column;
   height: calc(85vh - 90px);
   cursor: pointer;
-  padding:80px 20px 0px 20px;
+  padding:80px 0px 0px 0px;
   
 .text_container{
     display: flex;
@@ -84,7 +84,7 @@ p{
 }
 
   @media (max-width:767px){
-     padding:50px 20px 0px 20px;
+     padding:50px 0px 0px 0px;
       height: max-content;
       gap: 20px;
       h1 {

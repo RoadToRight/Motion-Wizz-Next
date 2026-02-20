@@ -32,7 +32,7 @@ const PortfolioVideo = ({ topMedia, bottomMedia }) => {
                                     return (
 
                                         <div className='image_div' key={index}>
-                                            <img src={img.image} alt="" />
+                                            <img loading='lazy' src={img.image} alt="" />
                                             <div className="play_btn" onClick={() => handlePopup(img.video)}><FaPlay /></div>
                                         </div>
 
@@ -56,7 +56,7 @@ const PortfolioVideo = ({ topMedia, bottomMedia }) => {
                                     return (
 
                                         <div className='image_div' key={index}>
-                                            <img src={img.image} alt="" />
+                                            <img loading='lazy' src={img.image} alt="" />
                                             <div className="play_btn" onClick={() => handlePopup(img.video)}><FaPlay /></div>
                                         </div>
 

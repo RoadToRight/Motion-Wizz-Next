@@ -3,17 +3,16 @@ import LogoSlider from '@/components/LogoSlider'
 import Navbar from '@/components/Navbar'
 import ThreeHero from '@/components/ThreeHero'
 import dynamic from 'next/dynamic'
-
-import { lazy, Suspense } from 'react'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-const Footer = lazy(() => import("@/components/Footer"))
-const Portfolio = lazy(() => import("@/components/Portfolio"))
-const Contact = lazy(() => import("@/components/Contact"))
-const Testimonial = lazy(() => import("@/components/Testimonial"))
-const Faqs = lazy(() => import("@/components/Faqs"))
-const Hero = lazy(() => import("@/components/Hero"))
+const Hero = dynamic(() => import("@/components/Hero"))
+const Portfolio = dynamic(() => import("@/components/Portfolio"))
+const Testimonial = dynamic(() => import("@/components/Testimonial"))
+const Faqs = dynamic(() => import("@/components/Faqs"))
+const Contact = dynamic(() => import("@/components/Contact"))
+const Footer = dynamic(() => import("@/components/Footer"))
+
 
 export default function Home() {
   return (
@@ -22,14 +21,15 @@ export default function Home() {
       <ThreeHero />
       <LogoSlider />
 
-      <Suspense fallback={<div style={{ textAlign: 'center', padding: '50px' }}>Loading...</div>}>
-        <Hero />
-        <Portfolio />
-        <Testimonial />
-        <Faqs />
-        <Contact />
-        <Footer />
-      </Suspense>
+      <Hero />
+      <Portfolio />
+
+      <Faqs />
+      <Testimonial />
+
+      <Contact />
+
+      <Footer />
     </div>
   );
 }

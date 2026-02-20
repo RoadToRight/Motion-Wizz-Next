@@ -15,7 +15,7 @@ const Hero = () => {
                 </div>
 
                 <div className="right_side">
-                    <video autoPlay loop muted src="https://motionwizz.com/wp-content/uploads/2026/01/WhatsApp-Video-2026-01-16-at-9.09.27-PM.mp4"></video>
+                    <video width={"820"} height={"470"} autoPlay loop muted src="https://motionwizz.com/wp-content/uploads/2026/01/WhatsApp-Video-2026-01-16-at-9.09.27-PM.mp4"></video>
                 </div>
             </div>
         </HeroSec>
@@ -68,12 +68,10 @@ background:
     }
     .right_side{
         width: 70%;
-           
 
     }
     .right_side video{
         width: 100%;
-         border: 1px solid #1b2c7a;
         border-radius: 12px;
     }
 

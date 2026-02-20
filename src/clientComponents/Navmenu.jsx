@@ -1,16 +1,17 @@
 "use client"
 import React, { useState } from 'react'
-import { MdMenu } from "react-icons/md";
-import { MdCancel } from "react-icons/md";
+import { MdMenu, MdCancel } from "react-icons/md";
 import Link from 'next/link'
 import Button from '@/components/Button';
 import styled from 'styled-components';
+import useWindowSize from '@/customHooks/useWindowSize';
 const Navmenu = ({ Menu }) => {
     const [drawerOpen, setDrawerOpen] = useState(false);
+    const Width = useWindowSize();
 
     return (
         <NavMenu>
-            <div className="menu_section" style={{ width: (drawerOpen ? "100%" : "0%"), padding: drawerOpen ? "20px" : "0px" }}>
+            <div className="menu_section" style={{ width: Width < 1024 && (drawerOpen ? "100%" : "0%"), padding: drawerOpen ? "20px" : "0px" }}>
 
                 <div>
 
@@ -43,14 +44,14 @@ const Navmenu = ({ Menu }) => {
                 </div>
 
             </div>
-            {<Button text={"Get a Quote"} className={"navbtn"} padding='8px 13px' />}
+            {Width < 1024 && <Button text={"Get a Quote"} className={"navbtn"} padding='8px 13px' />}
 
 
 
 
 
             <div onClick={() => setDrawerOpen(true)}>
-                {<MdMenu color='#ef5527' className='hamburger' size={35} />}
+                {Width < 1024 && <MdMenu color='#ef5527' className='hamburger' size={35} />}
             </div>
         </NavMenu>
     )
@@ -65,7 +66,4 @@ const NavMenu = styled.div`
  align-items: center;
  gap: 10px;
 
-    @media (max-width:767px) {
-        
-    }
 `
