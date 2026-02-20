@@ -5,6 +5,10 @@ import Link from 'next/link'
 import Button from '@/components/Button';
 import styled from 'styled-components';
 import useWindowSize from '@/customHooks/useWindowSize';
+import dynamic from 'next/dynamic';
+
+
+
 const Navmenu = ({ Menu }) => {
     const [drawerOpen, setDrawerOpen] = useState(false);
     const Width = useWindowSize();

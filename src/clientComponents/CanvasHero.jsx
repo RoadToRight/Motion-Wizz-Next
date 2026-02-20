@@ -8,7 +8,7 @@ const Sphere = dynamic(() => import('../components/Sphere'), {
 const CanvasHero = () => {
 
     if (window.innerWidth <= 767) {
-        return <div className='hero_img'><img loading='lazy' src="/orangeball.webp" width={"100%"} height={"100%"} /></div>;
+        return <div className='hero_img'><img loading='lazy' src="https://res.cloudinary.com/dp6b6emb9/image/upload/v1771553760/orangeball_n074xx.webp" width={"100%"} height={"100%"} /></div>;
     }
 
     const [DPS, setDPS] = useState(1);
