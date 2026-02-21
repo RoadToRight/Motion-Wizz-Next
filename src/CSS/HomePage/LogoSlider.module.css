@@ -18,7 +18,12 @@
        border: 1px solid #D4D4D4;
        border-bottom: 2px solid #D4D4D4;
        padding: 20px;
+       max-width: 250px;
+       height: 150px !important;
 
+       img {
+           max-height: 150px;
+       }
    }
 
 

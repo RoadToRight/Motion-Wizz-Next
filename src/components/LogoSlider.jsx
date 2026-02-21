@@ -53,7 +53,7 @@ const LogoSlider = () => {
                         return (
                             <SwiperSlide className={css.swiper_slide} key={logo + index}>
                                 <div className={css.logo_card}>
-                                    <img loading='lazy' src={logo} alt={`Logo ${index + 1}`} width={140} height={50} />
+                                    <img loading='lazy' src={logo} alt={`Logo ${index + 1}`} width={"100%"} height={"100%"} />
                                 </div>
                             </SwiperSlide>
                         )
