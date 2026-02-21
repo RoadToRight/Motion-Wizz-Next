@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { MdMenu, MdCancel } from "react-icons/md";
 import Link from 'next/link'
 import Button from '@/components/Button';
@@ -11,6 +11,10 @@ import css from "../CSS/HomePage/NavMenu.module.css"
 const Navmenu = ({ Menu }) => {
     const [drawerOpen, setDrawerOpen] = useState(false);
     const Width = useWindowSize();
+    useEffect(() => {
+
+    }, [])
+
 
     return (
         <div className={css.NavMenu}>
