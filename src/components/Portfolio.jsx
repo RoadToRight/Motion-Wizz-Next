@@ -1,8 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
 import Button from './Button'
 import PortfolioVideo from '@/clientComponents/PortfolioVideo';
-
+import css from "../CSS/HomePage/Portfolio.module.css"
 const Portfolio = () => {
 
 
@@ -53,14 +52,14 @@ const Portfolio = () => {
 
 
     return (
-        <PortfolioSec>
+        <div className={css.Portfolio}>
 
 
 
-            <div className="portfolio_top container">
+            <div className={`${css.portfolio_top} container`}>
                 <h4 className='highlight'>Creations</h4>
                 <h2>Work That Speaks Across Industries</h2>
-                <div className="text_btn">
+                <div className={css.text_btn}>
                     <p>From tech to healthcare, finance to education, here’s a glimpse of corporate video production we’ve done for companies across a wide range of industries.</p>
                     {/* <Button text={"View All Works"} /> */}
                 </div>
@@ -68,7 +67,7 @@ const Portfolio = () => {
             </div>
 
 
-            <div className="portfolio_bottom">
+            <div className={css.portfolio_bottom}>
 
 
 
@@ -78,186 +77,13 @@ const Portfolio = () => {
 
             </div>
 
-            <div className="btn">
+            <div className={css.btn}>
                 <Button text={"View All Works"} style={{ margin: "0px auto", display: "block" }} />
             </div>
 
-        </PortfolioSec>
+        </div >
     )
 }
 
 export default Portfolio
 
-const PortfolioSec = styled.section`
-/* background: url("/istockphoto-2204942462-612x612.jpg");
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover; */
-padding: 80px 0px;
-.text_btn{
-    display: flex;
-    justify-content: space-between;
-    p{
-        width:50%;
-    }
-
-}
-.image_div{
-    position: relative;
-    transition: all 300ms ease;
-    img{
-    border: 1px solid transparent;
-      transition: all 300ms ease;
-         border-radius: 12px;
-
-    }
-          border-radius: 12px;
-}
-.image_div::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-        border-radius: 12px 12px 0px 0px;
-    opacity: 1;
-    transition: all 300ms ease;
-    width: 100%;
-    height: 0;
-     
-           background-color: rgba(27, 44, 122, 0.6);
-}
-.image_div::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-        border-radius: 0px 0px 12px 12px;
-    opacity: 1;
-    transition: all 300ms ease;
-    width: 100%;
-    height: 0;
-     
-           background-color: rgba(27, 44, 122, 0.6);
-}
-
-.image_div:hover::before,.image_div:hover::after{
-    height: 50%;
-}
-.image_div:hover{
-    img{
-        
-         border-color: #1b2c7a;
-    }
-    .play_btn{
-        opacity: 1;
-    }
-}
-.play_btn{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 40px;
-    color: #ef5527;
-    cursor: pointer;
-    opacity: 0;
-      transition: all 300ms ease;
-      z-index: 3;
-}
-.btn{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-.portfolio_top{
-    margin-bottom: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    p{
-        margin: 0 auto;
-    }
-    .highlight{
-        max-width: max-content;
-        margin: 0 auto;
-    }
-}
-.portfolio_bottom {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.portfolio_track{
-    display: flex;
-        gap: 20px;
-    img{
-        width: 550px;
-           height: 100%;
-        object-fit: cover;
-    }
-}
-.top_track{
-    animation: marquee 40s linear infinite;
-
-}
-.bottom_track{
-  animation: reverseMarquee 40s linear infinite;
-}
-.portfolio_wrapper{
-       display: flex;
-        gap: 20px;
-        overflow: hidden;
-}
-.portfolio_wrapper_bottom{
-    flex-direction: row-reverse;
-
-}
-
-@keyframes marquee {
-    from{
-        transform: translate(0%);
-    }
-    to{
-        transform: translate(calc(-100% - 20px));
-    }
-}
-
-@keyframes reverseMarquee {
-    from{
-        transform: translate(0%);
-    }
-    to{
-        transform: translate(calc(100% - 20px));
-    }
-}
-@media (max-width:1024px){
-    .text_btn p{
-        width: 100%;
-    }
-    .portfolio_track {
-        
-    }
-    .portfolio_track{
-
-    img{
-        width: 420px;
-
-    }
-}
-}
-
-@media (max-width:767px){
-    padding: 50px 0px;
-       .portfolio_track{
-        img{
-        width: 300px;
-
-    }
-}
-}
-
-`

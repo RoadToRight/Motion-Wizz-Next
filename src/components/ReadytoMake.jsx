@@ -1,11 +1,10 @@
 "use client"
 import React, { useRef } from 'react'
-import styled from 'styled-components'
 import Button from './Button'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import css from "../CSS/HomePage/ReadytoMake.module.css"
 gsap.registerPlugin(ScrollTrigger);
 
 const readytoMake = () => {
@@ -36,51 +35,17 @@ const readytoMake = () => {
     }, { scope: ReadyDiv })
 
     return (
-        <Ready ref={ReadyDiv}>
-            <div className="left_section">
+        <div className={css.Ready} ref={ReadyDiv}>
+            <div className={css.left_section}>
                 <h3>Ready to make a video? 🎉</h3>
                 <p>New to MotionWizz? You can try us out before formal engagement. Really!</p>
             </div>
             <div className="right_section">
                 <Button text={"Let's Talk"} />
             </div>
-        </Ready>
+        </div>
     )
 }
 
 export default readytoMake
 
-
-const Ready = styled.div`
-    background-color: #FAFAFA;
-    box-shadow: 0px 20px 24px #10182822;
-    padding: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 900px;
-    border-radius: 16px;
-    margin: 0 auto;
-    position: relative;
-    top:-125px;
-
-    .left_section {
-
-        h3{
-            color: black;
-            margin-bottom: 12px;
-        }
-        p{
-            color: #737373;
-        }
-    }
-    
-    @media (max-width:767px){
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        gap: 20px;
-        margin: 0px 20px;
-        padding: 25px;
-    }
-`

@@ -1,7 +1,6 @@
 import FaqsWrapper from '@/clientComponents/FaqsWrapper';
 import React from 'react'
-import styled from 'styled-components'
-
+import css from "../CSS/HomePage/Faqs.module.css"
 const Faqs = () => {
 
   const FaqsData = [
@@ -55,13 +54,13 @@ const Faqs = () => {
 
 
   return (
-    <FaqsWrapperSec>
-      <div className="container">
-        <h5 className='highlight'>FAQ'S</h5>
+    <div className={css.FaqsWrapperSec}>
+      <div className={`${css.container} container`}>
+        <h5 className={`${css.highlight} highlight`}>FAQ'S</h5>
         <h2>Frequently Asked Questions</h2>
 
-        <div className="image_faqs_wrapper">
-          <div className="image_section">
+        <div className={css.image_faqs_wrapper}>
+          <div className={css.image_section}>
             <img loading='lazy' src="https://res.cloudinary.com/dp6b6emb9/image/upload/v1771122725/faqs_fonxjz.webp" alt="" />
           </div>
 
@@ -71,219 +70,9 @@ const Faqs = () => {
 
 
       </div>
-    </FaqsWrapperSec>
+    </div>
   )
 }
 
 export default Faqs
 
-const FaqsWrapperSec = styled.section`
-  padding: 100px 0;
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
-  position: relative;
-
-
-  .container {
-    position: relative;
-    z-index: 1;
-  }
-  .image_faqs_wrapper{
-    display: flex;
-    gap: 10px;
-    .image_section{
-      width: 50%;
-    position: relative;
-      display: flex;
-      justify-content: center;
-    }
-    .image_section img{
-      transition: all 300ms ease;
-      width: 100%;
-      height: max-content;
-      position: sticky;
-      top: 20px;
-      left: 0px;
-      object-fit: contain;
-      }
-    .accordian_wrapper{
-      width: 70%;
-      margin-top: 55px;
-    }
-  }
-
-  h2 {
-    font-size: 48px;
-    font-weight: 700;
-    color: #1a1a2e;
-    margin-bottom: 20px;
-    text-align: center;
-    letter-spacing: -0.5px;
-    animation: slideDown 0.8s ease-out;
-  }
-  .highlight{
-    margin-bottom: 10px;
-  }
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(30px);
-    }
-  }
-
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-      transform: translateY(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .accordian_wrapper {
-    max-width: 1280px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .accordian {
-    background: #fff;
-    border: 2px solid #e8e8f0;
-    border-radius: 16px;
-    overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    animation: fadeInUp 0.6s ease-out;
-
-    &:hover {
-      border-color: #EF5527;
-      box-shadow: 0 8px 25px rgba(255, 102, 34, 0.12);
-      transform: translateY(-2px);
-    }
-
-    &.active {
-      border-color: #EF5527;
-      box-shadow: 0 12px 35px rgba(255, 102, 34, 0.15);
-    }
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .ques {
-    padding: 24px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    font-size: 18px;
-    font-weight: 600;
-    color: #1a1a2e;
-    transition: all 0.3s ease;
-    user-select: none;
-
-    &:hover {
-      color: #EF5527;
-    }
-
-    span {
-      flex: 1;
-      line-height: 1.6;
-      letter-spacing: 0.3px;
-    }
-
-    .icon {
-      width: 32px;
-      height: 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #EF5527 0%, #ff5500 100%);
-      color: #fff;
-      border-radius: 50%;
-      font-size: 20px;
-      font-weight: 300;
-      flex-shrink: 0;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-  }
-
-  .accordian.active .ques .icon {
-    transform: rotate(45deg);
-    background: linear-gradient(135deg, #ff5500 0%, #EF5527 100%);
-  }
-
-  .ans {
-    padding: 0 24px 24px;
-    color: #5a5a70;
-    line-height: 1.8;
-    font-size: 15px;
-    letter-spacing: 0.3px;
-    font-weight: 400;
-    animation: expandDown 0.4s ease-out;
-    max-height: 500px;
-  }
-
-  @keyframes expandDown {
-    from {
-      opacity: 0;
-      max-height: 0;
-    }
-    to {
-      opacity: 1;
-      max-height: 500px;
-    }
-  }
-
-  /* Responsive Design */
-  @media (max-width: 767px) {
-    padding: 60px 0;
-
-    .image_faqs_wrapper{
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    h2 {
-      font-size: 36px;
-      margin-bottom: 40px;
-    }
-
-    .image_faqs_wrapper  .accordian_wrapper {
-      gap: 12px;
-      width: 100% !important;
-      margin-top: 10px;
-    }
-
-    .ques {
-      padding: 18px;
-      font-size: 16px;
-    }
-
-    .ans {
-      padding: 0 18px 18px;
-      font-size: 14px;
-    }
-
-    .ques .icon {
-      width: 28px;
-      height: 28px;
-      font-size: 18px;
-    }
-  }
-`

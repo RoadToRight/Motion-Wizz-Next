@@ -1,9 +1,8 @@
 "use client"
-import styled from 'styled-components'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
-
+import css from "../CSS/HomePage/Testimonial.module.css"
 
 const Testimonial = () => {
 
@@ -54,202 +53,79 @@ const Testimonial = () => {
 
 
     return (
-        <TestimonialSec>
+        <section className={css.testimonialSec}>
             <div className="container">
-                <div className="header">
+                <div className={css.header}>
                     <h3 className='highlight'>Testimonials</h3>
                     <h2>Discover What Other Brands Are Saying About us</h2>
                 </div>
 
-
-                <Swiper className="reviews_card_wrapper" loop={true} spaceBetween={20} slidesPerView={3} modules={[Pagination, Navigation, Autoplay]} navigation={{
-                    prevEl: ".prev-btn",
-                    nextEl: ".next-btn"
-                }} pagination={{ clickable: true, el: ".custom_pagination" }} autoplay={{
-                    delay: 3000,
-                    disableOnInteraction: false
-                }}
-
+                <Swiper
+                    className="reviews_card_wrapper"
+                    loop={true}
+                    spaceBetween={20}
+                    slidesPerView={3}
+                    modules={[Pagination, Navigation, Autoplay]}
+                    navigation={{
+                        prevEl: `.${css.prev_btn}`,
+                        nextEl: `.${css.next_btn}`,
+                    }}
+                    pagination={{
+                        clickable: true,
+                        el: `.${css.custom_pagination}`
+                    }}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false
+                    }}
                     breakpoints={{
-                        300: {
-                            slidesPerView: 1,
-                        },
-                        767: {
-                            slidesPerView: 1,
-                        },
-                        1024: {
-                            slidesPerView: 2,
-                        },
-                        1200: {
-                            slidesPerView: 3,
-                        }
+                        300: { slidesPerView: 1 },
+                        767: { slidesPerView: 1 },
+                        1024: { slidesPerView: 2 },
+                        1200: { slidesPerView: 3 }
                     }}
                 >
 
-                    {reviewsData?.map(({ name, designation, review, pic }) => {
-                        return (
-                            <SwiperSlide style={{ paddingTop: "30px" }} className='testimonial_slide' key={name}>
-                                <div className="reviews_card">
-                                    <div className="quote_icon">“</div>
-                                    <div className="stars">★★★★★</div>
-                                    <p className="review">
-                                        {review}
-                                    </p>
+                    {reviewsData?.map(({ name, designation, review, pic }) => (
+                        <SwiperSlide
+                            style={{ paddingTop: "30px" }}
+                            className={css.testimonial_slide}
+                            key={name}
+                        >
+                            <div className={css.reviews_card}>
+                                <div className={css.quote_icon}>“</div>
+                                <div className={css.stars}>★★★★★</div>
+                                <p className={css.review}>{review}</p>
 
-
-                                    <div className="person_info">
-                                        <div className="person_image"><img loading='lazy' src={pic} alt="" width={52} height={52} /></div>
-                                        <div className="info">
-                                            <div className="name">{name}</div>
-                                            <div className="designation">{designation}</div>
-                                        </div>
+                                <div className={css.person_info}>
+                                    <div className={css.person_image}>
+                                        <img loading='lazy' src={pic} alt="" width={52} height={52} />
                                     </div>
-
+                                    <div className={css.info}>
+                                        <div className={css.name}>{name}</div>
+                                        <div className={css.designation}>{designation}</div>
+                                    </div>
                                 </div>
-                            </SwiperSlide>
-                        )
-                    })}
-
-
+                            </div>
+                        </SwiperSlide>
+                    ))}
 
                 </Swiper>
 
-                <div className="swiper_controls">
-                    <div className="navigation prev-btn"><FaLongArrowAltLeft /></div>
+                <div className={css.swiper_controls}>
+                    <div className={`${css.navigation} ${css.prev_btn}`}>
+                        <FaLongArrowAltLeft />
+                    </div>
 
-                    <div className="custom_pagination"></div>
-                    <div className="navigation next-btn"><FaLongArrowAltRight /></div>
+                    <div className={css.custom_pagination}></div>
+
+                    <div className={`${css.navigation} ${css.next_btn}`}>
+                        <FaLongArrowAltRight />
+                    </div>
                 </div>
-
-
             </div>
-        </TestimonialSec>
+        </section>
     )
 }
 
 export default Testimonial
-
-
-const TestimonialSec = styled.div`
-
-    padding: 0px 0px;
-    .swiper_controls{
-        display: flex;  
-        justify-content: center;
-        align-items: center;
-        width: max-content;
-        background-color: #E4E4EE;
-            padding: 6px;
-            gap: 10px;
-            border-radius: 100px;
-            margin: 0 auto;
-            margin-top: 10px;
-    }
-    .header{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-    .navigation{
-         display: flex;  
-        justify-content: center;
-        align-items: center;
-        padding: 8px;
-        border-radius: 100px;
-        color: white;
-        cursor: pointer;
-        transition: all 300ms ease;
-    }
-    .navigation:hover{
-        background-color: #223377;
-    }
-       .prev-btn{
-            background-color: #C8C8C8;
-                /* color: #223377; */
-
-        }
-        .next-btn{
-            background-color: #fd5b26;
-        }
-    .custom_pagination{
-        .swiper-pagination-bullet:hover{
-              background-color: #223377;
-        }
-        .swiper-pagination-bullet{
-            background-color: #ADADAD;
-            opacity: 1;
-            margin: 0px 2px;
-               transition: all 300ms ease;
-        }
-          .swiper-pagination-bullet-active{
-            background-color: #FD5B26;
-        }
-    }
-
- .testimonial_slide {
-  display: flex !important;
-  height: auto;
-}
-
-    .reviews_card{
-        background: #fff;
-        border: 1px solid #fd5b26;
-        border-radius: 12px;
-        padding: 20px;
-        /* width: 300px; */
-        /* min-height: 180px; */
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        position: relative;
-        justify-content: space-between;
-        p{
-            font-size: 14px;
-        }
-        .name{
-            font-size: 14px;
-            font-weight: 600;
-        }
-        .designation{
-            font-size: 12px;
-        }
-    }
-    .person_info{
-        display: flex;
-        gap: 10px;
-        align-items: center;
-    }
-    .quote_icon{
-        background-color: #FD5B26;
-        width: 32px;
-        height: 32px;
-        display: flex;
-        justify-content: center;
-        align-items: center ;
-        border-radius: 100px;
-        font-size: 20px;
-        font-weight:700;
-        color: white;
-        position: absolute;
-        top: -16px;
-    }
-    .stars{
-        color: #223377;
-        margin-top: 10px;
-    }
-    .person_image{
-  
-        img{
-
-            border-radius: 100px;
-            object-fit: contain;
-        }
-    }
-    @media (max-width:767px) {
-        
-    }
-`

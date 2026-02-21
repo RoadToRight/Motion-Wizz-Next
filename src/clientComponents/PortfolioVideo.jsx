@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import VideoPopup from '../components/VideoPopup';
 import { FaPlay } from "react-icons/fa";
-
+import css from "../CSS/HomePage/PorfolioVideo.module.css"
 
 
 const PortfolioVideo = ({ topMedia, bottomMedia }) => {
@@ -23,17 +23,17 @@ const PortfolioVideo = ({ topMedia, bottomMedia }) => {
             }
 
 
-            <div className="portfolio_wrapper">
+            <div className={css.portfolio_wrapper}>
                 {
                     [1, 2, 3, 4].map((_, index) => {
                         return (
-                            <div className="portfolio_track top_track" key={index}>
+                            <div className={`${css.portfolio_track} ${css.top_track}`} key={index}>
                                 {topMedia?.map((img, index) => {
                                     return (
 
-                                        <div className='image_div' key={index}>
+                                        <div className={css.image_div} key={index}>
                                             <img loading='lazy' src={img.image} alt="" />
-                                            <div className="play_btn" onClick={() => handlePopup(img.video)}><FaPlay /></div>
+                                            <div className={css.play_btn} onClick={() => handlePopup(img.video)}><FaPlay /></div>
                                         </div>
 
                                     )
@@ -45,19 +45,19 @@ const PortfolioVideo = ({ topMedia, bottomMedia }) => {
             </div>
 
 
-            <div className="portfolio_wrapper portfolio_wrapper_bottom">
+            <div className={`${css.portfolio_wrapper} ${css.portfolio_wrapper_bottom}`}>
 
                 {
 
                     [1, 2, 3, 4].map((_, index) => {
                         return (
-                            <div className="portfolio_track bottom_track" key={index}>
+                            <div className={`${css.portfolio_track} ${css.bottom_track}`} key={index}>
                                 {bottomMedia?.map((img, index) => {
                                     return (
 
-                                        <div className='image_div' key={index}>
+                                        <div className={css.image_div} key={index}>
                                             <img loading='lazy' src={img.image} alt="" />
-                                            <div className="play_btn" onClick={() => handlePopup(img.video)}><FaPlay /></div>
+                                            <div className={css.play_btn} onClick={() => handlePopup(img.video)}><FaPlay /></div>
                                         </div>
 
                                     )

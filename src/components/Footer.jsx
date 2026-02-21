@@ -1,7 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
 import Ready from "./ReadytoMake"
 import Link from 'next/link'
+import css from "../CSS/HomePage/Footer.module.css"
 
 const Footer = () => {
 
@@ -16,16 +16,16 @@ const Footer = () => {
   ]
 
   return (
-    <FooterSec>
+    <footer className={css.FooterSec}>
       <Ready />
-      <div className="container">
-        <div className="footer_top">
-          <div className="sec logo_section">
+      <div className={`${css.container} container`}>
+        <div className={css.footer_top}>
+          <div className={`${css.sec} ${css.logo_section}`}>
             <img loading='lazy' src="https://res.cloudinary.com/dp6b6emb9/image/upload/v1770498867/Logo-2-1.png_1_uaok4j.webp" alt="Motion Wizz Logo" />
           </div>
-          <div className="list_footer_menus">
+          <div className={css.list_footer_menus}>
             {menus?.map((item, idx) => (
-              <div className="sec" key={idx}>
+              <div className={`${css.sec}`} key={idx}>
                 <h5>{item.head}</h5>
                 <ul>
                   {item?.links?.map(({ label, url }, i) => (
@@ -39,146 +39,20 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="footer_bottom">
-          <div className="policies">
+        <div className={css.footer_bottom}>
+          <div className={css.policies}>
             <Link href="#">Privacy Policy</Link>
             <Link href="#">Terms & Conditions</Link>
             <Link href="#">Sitemap</Link>
           </div>
-          <div className="copyright">
+          <div className={css.copyright}>
             &copy; 2025 Motion Wizz. All Rights Reserved.
           </div>
         </div>
       </div>
-    </FooterSec>
+    </footer>
   )
 }
 
 export default Footer
 
-const FooterSec = styled.footer`
-  /* background: url("https://res.cloudinary.com/dp6b6emb9/image/upload/v1770500261/Footer_eyglgx.webp") no-repeat bottom/cover; */
-  padding: 80px 0 30px;
-  color: #ddd;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  /* background: linear-gradient(135deg , #ffffff,#ffffff,#ffffff,#ff5e00); */
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  } 
-  .list_footer_menus{
-    display: flex;
-    justify-content: space-between;
-    
-    width: 100%;
-  }
-
-  .footer_top {
-    display: flex;
-    gap: 50px;
-    justify-content: flex-start;
-    margin-bottom: 40px;
-  }
-
-  .sec {
-
-
-    h5 {
-      color: #ff5e00; /* Vibrant accent */
-      font-size: 1.25rem;
-      margin-bottom: 15px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-
-      li {
-        margin-bottom: 12px;
-
-        a {
-          text-decoration: none;
-          color: black;
-          font-size: 0.95rem;
-          transition: color 0.3s ease;
-
-          &:hover {
-            color: #ff5e00;
-          }
-        }
-      }
-    }
-  }
-
-  .logo_section {
-    img {
-      width: 90px;
-      height: 90px;
-      object-fit: contain;
-      filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.3));
-    }
-  }
-
-  .footer_bottom {
-    border-top: 1px solid black;
-    padding-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.85rem;
-    color: black;
-
-    .policies {
-      display: flex;
-      gap: 20px;
-
-      a {
-        color: black;
-        text-decoration: none;
-        transition: color 0.3s ease;
-
-        &:hover {
-          color: #ff5e00;
-        }
-      }
-    }
-
-    .copyright {
-      margin-top: 10px;
-      opacity: 0.7;
-    }
-  }
-
-  @media (max-width:1024px){
-    .list_footer_menus{
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-    }
-  }
-
-  @media (max-width: 767px) {
-    .footer_top {
-      gap: 30px;
-        grid-template-columns: repeat(1,1fr);
-        padding-left: 20px;
-        flex-direction: column;
-    }
-    .sec h5{
-      font-size: 16px;
-    }
-    .footer_bottom {
-      flex-direction: column;
-      gap: 10px;
-      text-align: center;
-
-      .policies {
-        justify-content: center;
-      }
-    }
-  }
-`

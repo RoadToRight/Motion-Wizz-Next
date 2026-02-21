@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react'
+import css from "../CSS/HomePage/FaqsWrapper.module.css"
 
 const FaqsWrapper = ({ FaqsData }) => {
 
@@ -16,16 +17,16 @@ const FaqsWrapper = ({ FaqsData }) => {
 
     return (
         <>
-            <div className="accordian_wrapper">
+            <div className={css.accordian_wrapper}>
                 {FaqsData?.map(({ question, answer }, i) => {
 
                     return (
-                        <div className={`accordian ${faqsState[i] ? 'active' : ''}`} key={question + i}>
-                            <h4 className='ques' onClick={() => handleFaqs(i)}>
+                        <div className={`${css.accordian} ${faqsState[i] ? 'active' : ''}`} key={question + i}>
+                            <h4 className={css.ques} onClick={() => handleFaqs(i)}>
                                 <span>{question}</span>
-                                <div className='icon'>+</div>
+                                <div className={css.icon}>+</div>
                             </h4>
-                            {faqsState[i] && <p className='ans'>{answer}</p>}
+                            {faqsState[i] && <p className={css.ans}>{answer}</p>}
                         </div>
                     )
 

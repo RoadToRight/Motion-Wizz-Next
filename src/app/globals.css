@@ -1,6 +1,5 @@
 /* @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
  */
-@import "tailwindcss";
 
 /* DM Sans Regular */
 @font-face {
@@ -48,6 +47,9 @@ p {
   /* Regular */
 }
 
+.swiper-pagination-bullet-active {
+  background-color: #FD5B26 !important;
+}
 
 .highlight {
   position: relative;

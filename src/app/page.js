@@ -23,9 +23,9 @@ export default function Home() {
 
       <Hero />
       <Portfolio />
+      <Testimonial />
 
       <Faqs />
-      <Testimonial />
 
       <Contact />
 

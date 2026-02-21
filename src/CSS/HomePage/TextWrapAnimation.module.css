@@ -1,0 +1,49 @@
+.text_wrap {
+    padding: 0px 0px 20px 0px;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0px !important;
+    width: max-content;
+}
+
+.text_wrap h2 {
+    font-size: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    /* left: 50%; */
+    width: max-content;
+
+}
+
+
+.text_wrap h2.text_1 {
+    opacity: 0.5;
+}
+
+.text_wrap h2.text_2 {
+    position: absolute;
+    left: 0px;
+    width: 0%;
+    color: #ef5527;
+
+}
+
+@media (max-width:1024px) {
+    .text_wrap h2 {
+        font-size: 50px;
+    }
+
+}
+
+@media (max-width:767px) {
+    .text_wrap h2 {
+        font-size: 38px;
+    }
+
+}

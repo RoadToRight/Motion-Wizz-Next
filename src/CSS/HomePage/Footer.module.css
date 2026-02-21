@@ -1,0 +1,123 @@
+.FooterSec {
+    padding: 80px 0 30px;
+    color: #ddd;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+.list_footer_menus {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.footer_top {
+    display: flex;
+    gap: 50px;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+}
+
+.sec {
+
+
+    h5 {
+        color: #ff5e00;
+        /* Vibrant accent */
+        font-size: 1.25rem;
+        margin-bottom: 15px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin-bottom: 12px;
+
+            a {
+                text-decoration: none;
+                color: black;
+                font-size: 0.95rem;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: #ff5e00;
+                }
+            }
+        }
+    }
+}
+
+.logo_section {
+    img {
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
+        filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.3));
+    }
+}
+
+.footer_bottom {
+    border-top: 1px solid black;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: black;
+
+    .policies {
+        display: flex;
+        gap: 20px;
+
+        a {
+            color: black;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: #ff5e00;
+            }
+        }
+    }
+
+    .copyright {
+        margin-top: 10px;
+        opacity: 0.7;
+    }
+}
+
+
+@media (max-width:1024px) {
+    .list_footer_menus {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .footer_top {
+        gap: 30px;
+        grid-template-columns: repeat(1, 1fr);
+        padding-left: 20px;
+        flex-direction: column;
+    }
+
+    .sec h5 {
+        font-size: 16px;
+    }
+
+    .footer_bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+
+        .policies {
+            justify-content: center;
+        }
+    }
+}

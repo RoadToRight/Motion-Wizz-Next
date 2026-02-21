@@ -1,0 +1,18 @@
+@media (max-width:767px) {
+
+
+    .threeD_model {
+        display: none;
+    }
+
+    .hero_img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero_img img {
+        max-width: 330px;
+        margin: 0 auto;
+    }
+}
