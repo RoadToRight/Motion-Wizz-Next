@@ -19,7 +19,7 @@
        border-bottom: 2px solid #D4D4D4;
        padding: 20px;
        max-width: 250px;
-       height: 150px !important;
+       height: 150px;
 
        img {
            max-height: 150px;
@@ -54,6 +54,15 @@
 
        }
 
+       .LogoSliderSec .swiper_slide {
+           max-width: 250px;
+           height: 110px !important;
+
+           img {
+               max-height: 70px;
+           }
+       }
+
        .swiper_slide::after {
            content: "";
            position: absolute;
@@ -64,3 +73,5 @@
            background: linear-gradient(to right, #FF7112, #000000);
        }
    }
+
+   @media (max-width:767px) {}

@@ -9,7 +9,15 @@ import css from "../CSS/HomePage/CanvasHero.module.css"
 const CanvasHero = () => {
 
     if (window.innerWidth <= 767) {
-        return <div className={css.hero_img}><img loading='lazy' src="https://res.cloudinary.com/dp6b6emb9/image/upload/v1771553760/orangeball_n074xx.webp" width={"100%"} height={"100%"} /></div>;
+        return <div className={css.hero_img}><img
+            loading="eager"          // eager to load ASAP, not lazy
+            fetchPriority="high"     // tells browser to prioritize this request
+            src="https://res.cloudinary.com/dp6b6emb9/image/upload/w_600,f_auto,q_auto/orangeball_n074xx.webp"
+            alt="Orange Ball"
+            width={600}
+            height={600}
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        /></div>;
     }
 
     const [DPS, setDPS] = useState(1);
