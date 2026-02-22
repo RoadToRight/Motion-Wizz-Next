@@ -58,6 +58,10 @@
     max-width: 600px;
 }
 
+.hero_img {
+    display: none;
+}
+
 @media (max-width:1024px) {
     .text_container h1 {
         font-size: 30px;
@@ -77,6 +81,17 @@
         font-size: 30px;
     }
 
+    .hero_img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 350px;
+    }
+
+    .hero_img img {
+        max-width: 330px;
+        margin: 0 auto;
+    }
 }
 
 @keyframes shadowPulse {

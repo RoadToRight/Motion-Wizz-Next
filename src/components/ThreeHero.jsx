@@ -5,10 +5,13 @@ import Button from './Button'
 import dynamic from 'next/dynamic'
 
 import css from "../CSS/HomePage/ThreeHero.module.css"
+import useWindowSize from '@/customHooks/useWindowSize'
 const CanvasHero = dynamic(() => import('../clientComponents/CanvasHero'), {
   ssr: false
 })
 const ThreeHero = () => {
+
+  let Width = useWindowSize();
 
   return (
     <div className={css.MainHeroContainer}>
@@ -25,6 +28,19 @@ const ThreeHero = () => {
       </div>
       <div className={`${css.CanvasContianer}`}>
         <CanvasHero />
+
+        <div className={css.hero_img}>
+          {Width < 767 ? <img
+            loading="eager"          // eager to load ASAP, not lazy
+            fetchPriority="high"     // tells browser to prioritize this request
+            src="https://res.cloudinary.com/dp6b6emb9/image/upload/w_600,f_auto,q_auto/orangeball_n074xx.webp"
+            alt="Orange Ball"
+            width={600}
+            height={600}
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          /> : null}
+        </div>
+
       </div>
     </div>
   )

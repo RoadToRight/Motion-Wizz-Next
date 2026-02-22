@@ -51,14 +51,14 @@ const Navmenu = ({ Menu }) => {
                 </div>
 
             </div>
-            {Width < 1024 && <Button text={"Get a Quote"} className={css.navbtn} padding='8px 13px' />}
+            {/* <Button text={"Get a Quote"} className={css.navbtn} padding='8px 13px' /> */}
 
 
 
 
 
             <div onClick={() => setDrawerOpen(true)}>
-                {Width < 1024 && <MdMenu color='#ef5527' className={css.hamburger} size={35} />}
+                <MdMenu color='#ef5527' className={css.hamburger} size={35} />
             </div>
         </div>
     )

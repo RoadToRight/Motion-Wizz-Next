@@ -30,9 +30,15 @@
     background: transparent !important;
 }
 
+.hamburger {
+    display: none;
+}
+
 @media (max-width:1024px) {
 
-
+    .hamburger {
+        display: block;
+    }
 
     .menu_section {
         background-color: #ffffff;
@@ -104,7 +110,4 @@
 
 
 
-    .navbtn {
-        display: none;
-    }
 }
