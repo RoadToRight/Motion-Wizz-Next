@@ -29,6 +29,7 @@
         top: 20px;
         left: 0px;
         object-fit: contain;
+        max-width: 450px;
     }
 
     .accordian_wrapper {
@@ -74,6 +75,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
+
     }
 
     .FaqsWrapperSec h2 {
@@ -81,5 +84,14 @@
         margin-bottom: 40px;
     }
 
+    .image_section {
+        width: 80% !important;
+
+
+    }
+
+    .image_section img {
+        max-width: 100%;
+    }
 
 }

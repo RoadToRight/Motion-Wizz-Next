@@ -8,42 +8,42 @@ const Portfolio = () => {
 
     const topMedia = [
         {
-            image: "https://res.cloudinary.com/dp6b6emb9/image/upload/v1770608226/portfolio8_cxizzb.png",
+            image: "https://res.cloudinary.com/dp6b6emb9/image/upload/v1771787783/portfolio8_djwkhe.webp",
             video: "https://player.vimeo.com/video/1034578741?autoplay=1&rel=0&controls=0#t="
         },
         {
-            image: "https://res.cloudinary.com/dp6b6emb9/image/upload/v1770608226/portfolio7_pgwaab.png",
+            image: "https://res.cloudinary.com/dp6b6emb9/image/upload/v1771787784/portfolio7_orkm1a.webp",
             video: "https://player.vimeo.com/video/1034804148?autoplay=1&rel=0&controls=0#t="
         },
         {
-            image: "https://res.cloudinary.com/dp6b6emb9/image/upload/v1770608226/portfolio5_sejnq0.png",
+            image: "https://res.cloudinary.com/dp6b6emb9/image/upload/v1771787786/portfolio5_yvk6cy.webp",
             video: "https://player.vimeo.com/video/1035387969?autoplay=1&rel=0&controls=0#t="
         },
         {
-            image: "https://res.cloudinary.com/dp6b6emb9/image/upload/v1770608226/portfolio4_hdgowh.png",
+            image: "https://res.cloudinary.com/dp6b6emb9/image/upload/v1771787784/portfolio4_gxy77m.webp",
             video: "https://player.vimeo.com/video/1131752914?autoplay=1&rel=0&controls=0#t="
         },
         {
-            image: "https://res.cloudinary.com/dp6b6emb9/image/upload/v1770608227/portfolio1_f9hfyg.png",
+            image: "https://res.cloudinary.com/dp6b6emb9/image/upload/v1771787784/portfolio1_lxovmn.webp",
             video: "https://player.vimeo.com/video/1122818997?autoplay=1&rel=0&controls=0#t="
         }
     ];
 
     const bottomMedia = [
         {
-            image: "https://res.cloudinary.com/dp6b6emb9/image/upload/v1770608228/portfolio9_czechm.png",
+            image: "https://res.cloudinary.com/dp6b6emb9/image/upload/v1771787784/portfolio9_qp8f0v.webp",
             video: "https://player.vimeo.com/video/1131439530?autoplay=1&rel=0&controls=0#t="
         },
         {
-            image: "https://res.cloudinary.com/dp6b6emb9/image/upload/v1770608228/portfolio2_hj4mxu.png",
+            image: "https://res.cloudinary.com/dp6b6emb9/image/upload/v1771787784/portfolio2_ekgjlx.webp",
             video: "https://player.vimeo.com/video/1131439952?autoplay=1&rel=0&controls=0#t="
         },
         {
-            image: "https://res.cloudinary.com/dp6b6emb9/image/upload/v1770608229/portfolio6_ns67ok.png",
+            image: "https://res.cloudinary.com/dp6b6emb9/image/upload/v1771787785/portfolio6_th5lp1.webp",
             video: "https://player.vimeo.com/video/1131445648?autoplay=1&rel=0&controls=0#t="
         },
         {
-            image: "https://res.cloudinary.com/dp6b6emb9/image/upload/v1770608229/portfolio3_a3wmws.png",
+            image: "https://res.cloudinary.com/dp6b6emb9/image/upload/v1771787784/portfolio3_xzy6dz.webp",
             video: "https://player.vimeo.com/video/1131445511?autoplay=1&rel=0&controls=0#t="
         }
     ];

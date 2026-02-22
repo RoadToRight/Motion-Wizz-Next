@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import VideoPopup from '../components/VideoPopup';
 import { FaPlay } from "react-icons/fa";
 import css from "../CSS/HomePage/PorfolioVideo.module.css"
+import { CldImage } from 'next-cloudinary';
 
 
 const PortfolioVideo = ({ topMedia, bottomMedia }) => {
@@ -32,7 +33,8 @@ const PortfolioVideo = ({ topMedia, bottomMedia }) => {
                                     return (
 
                                         <div className={css.image_div} key={index}>
-                                            <img loading='lazy' src={img.image} alt="" />
+                                            {/* <img loading='lazy' src={img.image} alt="" /> */}
+                                            <CldImage sizes='(max-width:768px) 20vw, 50vw' loading='lazy' src={img.image} alt={`Logo ${index + 1}`} width={800} height={550} />
                                             <div className={css.play_btn} onClick={() => handlePopup(img.video)}><FaPlay /></div>
                                         </div>
 
