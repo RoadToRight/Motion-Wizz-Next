@@ -58,7 +58,7 @@ const PortfolioVideo = ({ topMedia, bottomMedia }) => {
                                     return (
 
                                         <div className={css.image_div} key={index}>
-                                            <img loading='lazy' src={img.image} alt="" />
+                                            <CldImage sizes='(max-width:768px) 20vw, 50vw' loading='lazy' src={img.image} alt={`Logo ${index + 1}`} width={800} height={450} />
                                             <div className={css.play_btn} onClick={() => handlePopup(img.video)}><FaPlay /></div>
                                         </div>
 
