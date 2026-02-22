@@ -3,7 +3,7 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 import css from "../CSS/HomePage/Testimonial.module.css"
-import { CldImage } from 'next-cloudinary';
+import Image from 'next/image';
 
 const Testimonial = () => {
 
@@ -101,7 +101,7 @@ const Testimonial = () => {
                                 <div className={css.person_info}>
                                     <div className={css.person_image}>
                                         {/* <img loading='lazy' src={pic} alt="" width={52} height={52} /> */}
-                                        <CldImage sizes='(max-width:768px) 20vw, 33vw' loading='lazy' src={pic} alt={`Logo `} width={52} height={52} />
+                                        <Image sizes='(max-width:768px) 20vw, 33vw' loading='lazy' src={pic} alt={`Logo `} width={52} height={52} />
                                     </div>
                                     <div className={css.info}>
                                         <div className={css.name}>{name}</div>

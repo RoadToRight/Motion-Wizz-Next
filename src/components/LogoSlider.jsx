@@ -3,7 +3,7 @@ import React from 'react'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import css from "../CSS/HomePage/LogoSlider.module.css"
-import { CldImage } from 'next-cloudinary'
+import Image from 'next/image';
 
 
 const LogoSlider = () => {
@@ -56,7 +56,7 @@ const LogoSlider = () => {
                             <SwiperSlide className={css.swiper_slide} key={logo + index}>
                                 <div className={css.logo_card}>
                                     {/* <img loading='lazy' src={logo} alt={`Logo ${index + 1}`} width={"100%"} height={"100%"} /> */}
-                                    <CldImage sizes='(max-width:768px) 30vw, 20vw' loading='lazy' src={logo} alt={`Logo ${index + 1}`} width={600} height={256} />
+                                    <Image sizes='(max-width:768px) 30vw, 20vw' loading='lazy' src={logo} alt={`Logo ${index + 1}`} width={600} height={256} />
                                 </div>
                             </SwiperSlide>
                         )
