@@ -37,9 +37,9 @@ const Sphere = () => {
         if (width < 600) {           // small screens
             setRadius(3.2);
         } else if (width < 1200) {   // medium screens
-            setRadius(5);
-        } else {                     // large screens
             setRadius(4.8);
+        } else {                     // large screens
+            setRadius(5.4);
         }
     }
 
