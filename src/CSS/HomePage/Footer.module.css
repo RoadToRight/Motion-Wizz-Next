@@ -54,6 +54,7 @@
 }
 
 .logo_section {
+    width: 20%;
     img {
         width: 90px;
         height: 90px;
@@ -97,6 +98,10 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+    .logo_section {
+    width: 100%;
+
+}
 }
 
 @media (max-width: 767px) {
