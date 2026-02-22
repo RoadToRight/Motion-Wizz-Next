@@ -63,7 +63,7 @@ const Faqs = () => {
         <div className={css.image_faqs_wrapper}>
           <div className={css.image_section}>
             {/* <img loading='lazy' src="https://res.cloudinary.com/dp6b6emb9/image/upload/v1771122725/faqs_fonxjz.webp" alt="" /> */}
-            <Image sizes='(max-width:768px) 30vw, 50vw' loading='lazy' src={"https://res.cloudinary.com/dp6b6emb9/image/upload/v1771122725/faqs_fonxjz.webp"} alt={`Logo `} width={500} height={480} />
+            <Image sizes='(max-width:768px) 40vw, 50vw' loading='lazy' src={"https://res.cloudinary.com/dp6b6emb9/image/upload/v1771122725/faqs_fonxjz.webp"} alt={`Logo `} width={500} height={480} />
           </div>
 
           <FaqsWrapper FaqsData={FaqsData} />
